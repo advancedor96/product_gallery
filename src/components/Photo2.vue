@@ -29,6 +29,7 @@
 		background-size: cover;
 		background-position: center center;
 		margin: 10px 20px;
+		margin-top: 150px;
 		&>* {
 
 			position: absolute;
