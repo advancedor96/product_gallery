@@ -1,28 +1,38 @@
+   //  <HelloWorld msg="Welcome to Your Vue.js App"/>
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+		<Photo1 />
+		<Photo2 />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import HelloWorld from './components/HelloWorld.vue'
+import Photo1 from './components/Photo1.vue';
+import Photo2 from './components/Photo2.vue';
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Photo1, Photo2
   }
 }
 </script>
 
 <style>
+*{
+	box-sizing: border-box;
+}
+html, body{
+	font-family: 'Roboto', sans-serif;
+	
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	/* font-family: 'Roboto', sans-serif;; */
+  /* font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 60px; */
 }
 </style>
