@@ -1,11 +1,14 @@
 <template>
-	<div class="img">
-		<div class="title">SWEATSHIRTS</div>
-		<div class="subTitle">Men’s jacket</div>
-		<div class="slash"></div>
-		<div class="border"></div>
-		<div class="number">05</div>
+	<div class="photo5-container">
+		<div class="img">
+			<div class="title">SWEATSHIRTS</div>
+			<div class="subTitle">Men’s jacket</div>
+			<div class="slash"></div>
+			<div class="border"></div>
+			<div class="number">05</div>
+		</div>
 	</div>
+
 </template>
 <script>
 	export default {
@@ -14,8 +17,39 @@
 </script>
 
 <style scoped lang="scss">
-	* {
-		box-sizing: border-box;
+	$pc: 960px;
+	$padMax: 959px;
+	$padMin: 481px;
+	$phoneMax:480px;
+
+	@mixin pc() {
+		@media all and(max-width: $pc) {
+			@content;
+		}
+	}
+
+	@mixin pad() {
+		@media all and(min-width: $padMin) and (max-width: $padMax) {
+			@content;
+		}
+	}
+
+	@mixin mobile() {
+		@media all and(max-width: $phoneMax) {
+			@content;
+		}
+	}
+
+	.photo5-container {
+		display: inline-block;
+		margin-top: -140px;
+		@include pad() {
+			margin-top: 40px;
+		}
+
+		@include mobile() {
+			margin-top: 40px;
+		}
 	}
 
 	.img {
@@ -28,7 +62,11 @@
 		background-size: cover;
 		background-position: center center;
 		font-family: Roboto-Black;
-		;
+		margin-left: 256px;
+		margin-top: 50px;
+		margin-right: 130px;
+		margin-bottom: 50px;
+
 		&>* {
 			position: absolute;
 			z-index: -1;

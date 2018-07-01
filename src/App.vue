@@ -16,7 +16,7 @@
 				<Photo3 />
 				<Photo4 />
 			</div>
-			<div class="row" :style="{'justify-content':'flex-start', 'padding-top': '150px'}">
+			<div class="row" :style="{'justify-content':'flex-start'}">
 				<Photo5 />
 			</div>
 			<div class="row" :style="{ 'padding-top': '150px'}">
