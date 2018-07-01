@@ -1,11 +1,14 @@
 <template>
-	<div class="img">
-		<div class="title">DENIM</div>
-		<div class="subTitle">Men’s cadual</div>
-		<div class="slash"></div>
-		<div class="border"></div>
-		<div class="number">04</div>
+	<div class="photo4-container">
+		<div class="img">
+			<div class="title">DENIM</div>
+			<div class="subTitle">Men’s cadual</div>
+			<div class="slash"></div>
+			<div class="border"></div>
+			<div class="number">04</div>
+		</div>
 	</div>
+
 </template>
 <script>
 	export default {
@@ -14,8 +17,42 @@
 </script>
 
 <style scoped lang="scss">
-	* {
-		box-sizing: border-box;
+
+	$pc: 960px;
+	$padMax: 959px;
+	$padMin: 481px;
+	$phoneMax:480px;
+
+
+	@mixin pc(){
+		@media all and(max-width: $pc){
+			@content;
+		}
+	}
+	@mixin pad(){
+		@media all and(min-width: $padMin) and (max-width: $padMax){
+			@content;
+		}
+	}
+	@mixin mobile(){
+		@media all and(max-width: $phoneMax){
+			@content;
+		}
+	}
+
+
+	.photo4-container {
+		display: inline-block;
+		margin-top: -70px;
+
+		@include pad{
+			margin-top: 50px;
+		}
+		@include mobile(){
+			margin-top: 40px;
+		}
+
+
 	}
 
 	.img {
@@ -28,7 +65,11 @@
 		background-size: cover;
 		background-position: center center;
 		font-family: Roboto-Black;
-		;
+
+		margin-top: 145px;
+		margin-bottom: 50px;
+		margin-left: 78px;
+
 		&>* {
 			position: absolute;
 			z-index: -1;
@@ -74,26 +115,27 @@
 		border: 20px solid #50E3C2;
 		z-index: -1;
 	}
-	.slash{
-			position: absolute;
-			display: inline-block;
-			left: 0;
-			bottom: -50px;
-			width: 240px;
-			height: 100px;
-			background: linear-gradient(-45deg, #50E3C2 8%, transparent 8%,
-			transparent 16%, #50E3C2 16%,
-			#50E3C2 24%, transparent 24%,
-			transparent 32%, #50E3C2 32%,
-			#50E3C2 40%, transparent 40%,
-			transparent 48%, #50E3C2 48%,
-			#50E3C2 56%, transparent 56%,
-			transparent 64%, #50E3C2 64%,
-			#50E3C2 72%, transparent 72%,
-			transparent 80%, #50E3C2 80%,
-			#50E3C2 88%, transparent 88%,
-			transparent 96%, #50E3C2 96%); // 比較直覺的方式，哈
-			z-index: 1;
+
+	.slash {
+		position: absolute;
+		display: inline-block;
+		left: 0;
+		bottom: -50px;
+		width: 240px;
+		height: 100px;
+		background: linear-gradient(-45deg, #50E3C2 8%, transparent 8%,
+		transparent 16%, #50E3C2 16%,
+		#50E3C2 24%, transparent 24%,
+		transparent 32%, #50E3C2 32%,
+		#50E3C2 40%, transparent 40%,
+		transparent 48%, #50E3C2 48%,
+		#50E3C2 56%, transparent 56%,
+		transparent 64%, #50E3C2 64%,
+		#50E3C2 72%, transparent 72%,
+		transparent 80%, #50E3C2 80%,
+		#50E3C2 88%, transparent 88%,
+		transparent 96%, #50E3C2 96%); // 比較直覺的方式，哈
+		z-index: 1;
 
 	}
 

@@ -1,5 +1,5 @@
 <template>
-	<div class="container">
+	<div class="Photo1-container">
 		<div class="title">LINEN BLAZER</div>
 		<div class="img"></div>
 		<div class="right"></div>
@@ -17,13 +17,12 @@
 </script>
 
 <style scoped lang="scss" >
-	.container {
+	.Photo1-container {
 		display: inline-block;
 		width: 540px;
 		height: 500px;
 		font-weight: bold;
 		position: relative;
-		margin: 10px 20px;
 		.title {
 			z-index: 1;
 			position: absolute;

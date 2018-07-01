@@ -19,7 +19,7 @@
 	}
 
 	.img {
-		margin-left: 200px;
+		margin: 60px 120px 0px 30px;
 		display: inline-block;
 		position: relative;
 		background: url("./p7.jpg");

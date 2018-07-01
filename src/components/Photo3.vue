@@ -1,11 +1,15 @@
 <template>
-	<div class="img">
-		<div class="title">SUPER SKINNY</div>
-		<div class="subTitle">Men’s pattern shirts</div>
-		<div class="rec"></div>
-		<div class="border"></div>
-		<div class="number">03</div>
+	<div class="photo3-container">
+
+		<div class="img">
+			<div class="title">SUPER SKINNY</div>
+			<div class="subTitle">Men’s pattern shirts</div>
+			<div class="rec"></div>
+			<div class="border"></div>
+			<div class="number">03</div>
+		</div>
 	</div>
+
 </template>
 <script>
 	export default {
@@ -14,9 +18,12 @@
 </script>
 
 <style scoped lang="scss">
-	*{
-		box-sizing: border-box;
+	.photo3-container {
+		display: inline-block;
+		width: 540px;
+		height: 335px;
 	}
+
 	.img {
 
 		display: inline-block;
@@ -27,7 +34,10 @@
 		background-size: cover;
 		background-position: center center;
 		font-family: Roboto-Black;
-		;
+
+		margin-top: 81px;
+		margin-right: 60px;
+		margin-bottom: 50px;
 		&>* {
 			position: absolute;
 			z-index: -1;
@@ -78,6 +88,7 @@
 		right: -60px;
 		bottom: -50px;
 	}
+
 	.number {
 		font-size: 48px;
 		font-weight: bold;

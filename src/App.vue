@@ -2,22 +2,27 @@
 <HelloWorld msg="Welcome to Your Vue.js App" />
 <template>
 	<div id="app">
-		<div class="subtitle">CCCLOTHES</div>
-		<div class="title">MEN'S TOPS</div>
-		<!-- <div class="row">
-			<Photo1 />
-			<Photo2 />
-		</div>
-		<div class="row" :style="{ 'padding-top': '150px'}">
-			<Photo3 />
-			<Photo4 />
-		</div>
-		<div class="row"  :style="{'justify-content':'flex-start', 'padding-top': '150px'}">
-			<Photo5 />
-		</div> -->
-		<div class="row" :style="{ 'padding-top': '150px'}">
-			<!-- <Photo6 /> -->
-			<Photo7 />
+		<div class="container">
+
+			<div class="subtitle">CCCLOTHES</div>
+			<div class="title">MEN'S TOPS</div>
+
+			<div class="row">
+				<Photo1 />
+				<Photo2 />
+			</div>
+
+			<div class="row" :style="{'margin-top': '77px'}">   <!-- :style="{ 'padding-top': '150px'}" -->
+				<Photo3 />
+				<Photo4 />
+			</div>
+			<div class="row" :style="{'justify-content':'flex-start', 'padding-top': '150px'}">
+				<Photo5 />
+			</div>
+			<div class="row" :style="{ 'padding-top': '150px'}">
+				<Photo6 />
+				<Photo7 />
+			</div>
 		</div>
 
 	</div>
@@ -45,19 +50,24 @@
 		}
 	}
 </script>
-
-<style lang="scss" scoped>
-	* {
-		box-sizing: border-box;
-	}
+<style lang="scss">
 
 	html,
 	body {
 		font-family: 'Roboto', sans-serif;
+		margin: 0;
+		padding: 0;
 
 	}
 
+	* {
+		box-sizing: border-box;
+	}
+</style>
+
+<style lang="scss" scoped>
 	#app {
+		width: 100%;
 		.subtitle {
 			font-size: 20px;
 			background-color: black;
@@ -71,7 +81,7 @@
 		.title {
 			text-align: center;
 			font-size: 72px;
-			height: 85px;
+			height: 72px;
 			font-weight: bold;
 			margin-top: 9px;
 		}
@@ -79,14 +89,17 @@
 			margin-top: 34px;
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: center;
+			justify-content: space-between;
 		}
-		/* font-family: 'Roboto', sans-serif;; */
-		/* font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px; */
+
+	}
+
+	.container {
+		max-width: 1040px;
+		width: 100%;
+		min-width: 500px; // background-color: gray;
+		margin: 0 auto;
+		padding: 32px;
+		border: 1px solid red;
 	}
 </style>
