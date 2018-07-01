@@ -1,10 +1,13 @@
 <template>
-	<div class="img">
-		<div class="title">EDITION</div>
-		<div class="subTitle">Men’s shirts</div>
-		<div class="rec"></div>
-		<div class="border"></div>
-		<div class="number">07</div>
+	<div class="photo7-container">
+
+		<div class="img">
+			<div class="title">EDITION</div>
+			<div class="subTitle">Men’s shirts</div>
+			<div class="rec"></div>
+			<div class="border"></div>
+			<div class="number">07</div>
+		</div>
 	</div>
 </template>
 <script>
@@ -14,12 +17,48 @@
 </script>
 
 <style scoped lang="scss">
-	* {
-		box-sizing: border-box;
+	$pc: 960px;
+	$padMax: 959px;
+	$padMin: 481px;
+	$phoneMax:480px;
+
+	@mixin pc() {
+		@media all and(max-width: $pc) {
+			@content;
+		}
+	}
+
+	@mixin pad() {
+		@media all and(min-width: $padMin) and (max-width: $padMax) {
+			@content;
+		}
+	}
+
+	@mixin mobile() {
+		@media all and(max-width: $phoneMax) {
+			@content;
+		}
+	}
+
+	.photo7-container {
+		display: inline-block;
+		margin-top: 60px;
+		order: 1;
+		@include pad() {
+			order: 2;
+		}
+		@include mobile() {
+			order: 2;
+		}
 	}
 
 	.img {
-		margin: 60px 120px 0px 30px;
+		margin: 0;
+
+		margin-top: 50px;
+		margin-left: 0px;
+		margin-right: 120px;
+
 		display: inline-block;
 		position: relative;
 		background: url("./p7.jpg");

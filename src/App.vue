@@ -19,7 +19,7 @@
 			<div class="row" :style="{'justify-content':'flex-start'}">
 				<Photo5 />
 			</div>
-			<div class="row" :style="{ 'padding-top': '150px'}">
+			<div class="row67" >
 				<Photo6 />
 				<Photo7 />
 			</div>
@@ -90,6 +90,13 @@
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
+		}
+		.row67{
+			margin-top: 34px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			
 		}
 
 	}

@@ -1,11 +1,14 @@
 <template>
-	<div class="img">
-		<div class="title">VINTAGE DENIM</div>
-		<div class="subTitle">Men’s classic</div>
-		<div class="rec"></div>
-		<div class="border"></div>
-		<div class="number">06</div>
+	<div class="photo6-container">
+		<div class="img">
+			<div class="title">VINTAGE DENIM</div>
+			<div class="subTitle">Men’s classic</div>
+			<div class="rec"></div>
+			<div class="border"></div>
+			<div class="number">06</div>
+		</div>
 	</div>
+
 </template>
 <script>
 	export default {
@@ -14,12 +17,44 @@
 </script>
 
 <style scoped lang="scss">
-	* {
-		box-sizing: border-box;
+	$pc: 960px;
+	$padMax: 959px;
+	$padMin: 481px;
+	$phoneMax:480px;
+
+	@mixin pc() {
+		@media all and(max-width: $pc) {
+			@content;
+		}
+	}
+
+	@mixin pad() {
+		@media all and(min-width: $padMin) and (max-width: $padMax) {
+			@content;
+		}
+	}
+
+	@mixin mobile() {
+		@media all and(max-width: $phoneMax) {
+			@content;
+		}
+	}
+
+	.photo6-container {
+		display: inline-block;
+		margin-top: -170px;
+		order: 2;
+		@include pad() {
+			margin-top: 40px;
+			order: 1;
+		}
+		@include mobile() {
+			margin-top: 40px;
+			order: 1;
+		}
 	}
 
 	.img {
-		margin: 60px 0 60px 60px;
 		display: inline-block;
 		position: relative;
 		background: url("./p6.jpg");
@@ -28,7 +63,11 @@
 		background-size: cover;
 		background-position: center center;
 		font-family: Roboto-Black;
-		;
+		margin: 0;
+		margin-top: 80px;
+		margin-bottom: 50px;
+		margin-left: 60px;
+
 		&>* {
 			position: absolute;
 			z-index: -1;
@@ -70,7 +109,7 @@
 		border: 20px solid #50E3C2;
 		z-index: -1;
 	}
-	
+
 
 	.rec {
 		width: 240px;
@@ -81,6 +120,7 @@
 		background-color: #50E3C2;
 		z-index: -1;
 	}
+
 	.number {
 		font-size: 48px;
 		font-weight: bold;
