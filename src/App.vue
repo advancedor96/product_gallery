@@ -4,7 +4,7 @@
 	<div id="app">
 		<div class="subtitle">CCCLOTHES</div>
 		<div class="title">MEN'S TOPS</div>
-		<div class="row">
+		<!-- <div class="row">
 			<Photo1 />
 			<Photo2 />
 		</div>
@@ -14,9 +14,9 @@
 		</div>
 		<div class="row"  :style="{'justify-content':'flex-start', 'padding-top': '150px'}">
 			<Photo5 />
-		</div>
+		</div> -->
 		<div class="row" :style="{ 'padding-top': '150px'}">
-			<Photo6 />
+			<!-- <Photo6 /> -->
 			<Photo7 />
 		</div>
 
