@@ -62,7 +62,6 @@
 		height: 400px;
 		background-size: cover;
 		background-position: center center;
-		font-family: Roboto-Black;
 		margin: 0;
 		margin-top: 80px;
 		margin-bottom: 50px;

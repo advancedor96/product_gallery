@@ -61,7 +61,6 @@
 		height: 200px;
 		background-size: cover;
 		background-position: center center;
-		font-family: Roboto-Black;
 		margin-left: 256px;
 		margin-top: 50px;
 		margin-right: 130px;
@@ -120,6 +119,18 @@
 		top: 0;
 		left: 240px;
 		z-index: 1;
+
+		@include pad() {
+			left: 0;
+			right: 0;
+			top: -28px;
+		}
+
+		@include mobile() {
+			left: 0;
+			right: 0;
+			top: -28px;
+		}
 	}
 
 	.border {

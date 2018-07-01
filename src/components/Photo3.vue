@@ -22,6 +22,7 @@
 		display: inline-block;
 		width: 540px;
 		height: 335px;
+		font-weight: bold;
 	}
 
 	.img {
@@ -33,7 +34,6 @@
 		height: 200px;
 		background-size: cover;
 		background-position: center center;
-		font-family: Roboto-Black;
 
 		margin-top: 81px;
 		margin-right: 60px;

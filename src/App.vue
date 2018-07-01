@@ -57,6 +57,7 @@
 		font-family: 'Roboto', sans-serif;
 		margin: 0;
 		padding: 0;
+		overflow-x: hidden;
 
 	}
 
@@ -107,6 +108,5 @@
 		min-width: 500px; // background-color: gray;
 		margin: 0 auto;
 		padding: 32px;
-		border: 1px solid red;
 	}
 </style>

@@ -66,8 +66,6 @@
 		height: 400px;
 		background-size: cover;
 		background-position: center center;
-		font-family: Roboto-Black;
-		;
 		&>* {
 			position: absolute;
 			z-index: -1;
