@@ -2,13 +2,24 @@
 <HelloWorld msg="Welcome to Your Vue.js App" />
 <template>
 	<div id="app">
-		<div class="subtitle">CCCCCLOTHES</div>
-		<div class="title">MENS'S TOPS</div>
+		<div class="subtitle">CCCLOTHES</div>
+		<div class="title">MEN'S TOPS</div>
 		<div class="row">
-		<Photo1 />
-		<Photo2 />
-
+			<Photo1 />
+			<Photo2 />
 		</div>
+		<div class="row" :style="{ 'padding-top': '150px'}">
+			<Photo3 />
+			<Photo4 />
+		</div>
+		<div class="row"  :style="{'justify-content':'flex-start', 'padding-top': '150px'}">
+			<Photo5 />
+		</div>
+		<div class="row" :style="{ 'padding-top': '150px'}">
+			<Photo6 />
+			<Photo7 />
+		</div>
+
 	</div>
 </template>
 
@@ -16,16 +27,26 @@
 	// import HelloWorld from './components/HelloWorld.vue'
 	import Photo1 from './components/Photo1.vue';
 	import Photo2 from './components/Photo2.vue';
+	import Photo3 from './components/Photo3.vue';
+	import Photo4 from './components/Photo4.vue';
+	import Photo5 from './components/Photo5.vue';
+	import Photo6 from './components/Photo6.vue';
+	import Photo7 from './components/Photo7.vue';
 	export default {
 		name: 'app',
 		components: {
 			Photo1,
-			Photo2
+			Photo2,
+			Photo3,
+			Photo4,
+			Photo5,
+			Photo6,
+			Photo7,
 		}
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	* {
 		box-sizing: border-box;
 	}
@@ -54,7 +75,7 @@
 			font-weight: bold;
 			margin-top: 9px;
 		}
-		.row{
+		.row {
 			margin-top: 34px;
 			display: flex;
 			flex-wrap: wrap;

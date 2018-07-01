@@ -43,6 +43,7 @@
 		left: 120px;
 		font-size: 48px;
 		font-weight: bold;
+			text-shadow: 0px -21px rgba(0, 0, 0, 0.3), 0px -35px rgba(0, 0, 0, 0.1)
 	}
 
 	.subTitle {
